@@ -26,4 +26,4 @@ These are the tools that will be explained in this guide. You will see how these
   
 The following is a straight forward and common sense approach to configuring a private and secure Bitcoin home mining network. Even with the other tools and approaches available, the tradeoff was added complication. The risk of introducing latency from the VPN connection is mitigated by automatically routing internet traffic over multiple VPN tunnels.   
   
-  
+If at anypoint in this guide you need more clarity, you can view the full and complete guide with many more details [here](https://www.econoalchemist.com/post/bitcoin-home-mining-network-privacy).  
