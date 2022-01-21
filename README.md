@@ -24,6 +24,6 @@ You may be exposed to some new terms during the course of this guide, it is impo
   
 These are the tools that will be explained in this guide. You will see how these puzzle pieces all fit together to help you guard your privacy and secure your Bitcoin home mining operation. These tools are not the only ones available, there are a range of firewall software projects, VPN protocols, and VPN providers. Feel free to explore what is out there and find what works best for you. There are also different ways in which to achieve the ends of guarding your privacy, for example setting up a router with DNScrypt and setting up a SOCKs5 proxy. 
   
-The following is a straight forward and common sense approach to configuring a private and secure Bitcoin home mining network. Even with the other tools and approaches available, the tradeoff was added complication.   
+The following is a straight forward and common sense approach to configuring a private and secure Bitcoin home mining network. Even with the other tools and approaches available, the tradeoff was added complication. The risk of introducing latency from the VPN connection is mitigated by automatically routing internet traffic over multiple VPN tunnels.   
   
   
