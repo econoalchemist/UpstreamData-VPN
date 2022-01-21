@@ -39,7 +39,9 @@ Next, select your blank USB drive and then click on `Flash`. BelenaEtcher will b
 
 After the flashing is complete, you should get a green check mark indicating that everything checks out. If you get an error from BelenaEtcher, you may need to try flashing to a different USB drive.
 
-![](assets/Flash5.png)
+<p align="center">
+  <img src="assets/Flash5.png">
+</p>  
 
 ## Install pfSense
 Connect a keyboard, monitor, power cable, and the flashed USB drive to your desktop computer that you installed the network card in. The monitor needs to be connected via VGA connections, DisplayPort connections won't work with the image you downloaded from the steps above. Do not connect the Ethernet cables yet. If you have any data on your desktop that you want to save, this is your last chance to save it before you erase the hard drive. 
@@ -91,7 +93,9 @@ The following steps will all be completed on the keyboard and monitor connected 
 
 Just to illustrate an example signal path configuration, you could do a setup like this:
 
-![](assets/Wire_Diagram.png)
+<p align="center">
+  <img src="assets/Wire_Diagram.png">
+</p>  
 
 At this point, you should be able to enter `192.168.1.1` into your web browser on your regular desktop and launch the pfSense web interface. It is a self-signed certificate, so accept the risk when prompted and continue. The login credentials are `admin/pfsense`.
 
