@@ -49,6 +49,6 @@ Repeat this process for as many keys as you generated, selecting a different ser
 Inside the configuration files you downloaded, you will find all the necessary information that WireGuard will need in order to establish your encrypted tunnels. This includes, the private keym, the public key, the host address, and the end point. 
 
 <p align="center">
-  <img width="500" src="assets/Mullvad6.png">
+  <img src="assets/Mullvad6.png">
 </p>
 
