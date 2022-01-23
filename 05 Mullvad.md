@@ -6,7 +6,7 @@ Now that you have pfSense setup, you're ready to get your Mullvad account. Mullv
 - The cost is €5 per month. 
 - Mullvad does not log IP addresses. 
 
-The basic idea presented in this section is that you will see how to make a Mullvad account and then build the configuration files that you're going to need so that WireGuard has all the information it needs to build the encrypted tunnels in the next section. 
+The basic idea presented in this section is that you will see how to make a Mullvad account and then build the configuration files that you're going to need so that WireGuard has all the information it needs to build the encrypted tunnels in the next section. Please note, that with the kind of configuration presented in this guide is not the same as downloading the Mullvad application from their website, you do not need to download the Mullvad app.  
 
 Navigate to [https://mullvad.net/en/](https://mullvad.net/en/) and click on "Generate Account".
 
@@ -42,7 +42,9 @@ Be cautious about sharing this information with anyone, you want to keep your Mu
 
 Repeat this process for as many keys as you generated, selecting a different server for each unique key and generating the configuration file. Naming the configuration file as the city and server used is helpful in a later step.
 
-![](assets/Mullvad5.png)
+<p align="center">
+  <img src="assets/Mullvad5.png">
+</p>  
 
 Inside the configuration files you downloaded, you will find all the necessary information that WireGuard will need in order to establish your encrypted tunnels. This includes, the private keym, the public key, the host address, and the end point. 
 
