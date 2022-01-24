@@ -1,6 +1,10 @@
 # Configuring WireGuard
 This section will show you how to add the WireGuard package to pfSense and then how to use the Mullvad configuration files to setup WireGuard to build your encrypted tunnels.
 
+The majority of the information in this section came from watching this Chrstian McDonald video. You do not need to watch this video now, but if you want more details on the subject, this does a great job explaining everything covered here. 
+
+[![Christian McDonald Video](assets/CMvid.png)](https://youtu.be/wYe7FzZ_0X8 "Christian McDonald WireGuard Tutorial")
+
 ## WireGuard Package
 - The first thing you need to do is add the WireGuard package to pfSense. In pfSense, navigate to `System` > `Package Manager` > `Available Packages` then scroll down to the WireGuard link and click on `Install`. On the next page click on `Confirm`. The installer will run and let you know when it has successfully completed.
 
