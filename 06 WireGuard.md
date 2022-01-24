@@ -1,7 +1,7 @@
 # Configuring WireGuard
 This section will show you how to add the WireGuard package to pfSense and then how to use the Mullvad configuration files to setup WireGuard to build your encrypted tunnels.
 
-The majority of the information in this section came from watching this Chrstian McDonald video. You do not need to watch this video now, but if you want more details on the subject, this does a great job explaining everything covered here. 
+The majority of the information in this section came from watching this Christian McDonald video. You do not need to watch this video now, but if you want more details on the subject, this does a great job explaining everything covered here. 
 
 [![Christian McDonald Video](assets/CMvid.png)](https://youtu.be/wYe7FzZ_0X8 "Christian McDonald WireGuard Tutorial")
 
@@ -95,7 +95,7 @@ In the `Gateways` section, you will notice that all the Gateways are online. The
 
 You'll notice that all the tunnel ping times are `0ms`. That's because no data is being sent out through these tunnels. By pinging a public DNS server, pfSense can get some useful metrics and make decisions about which tunnel will provide the least latency or if a remote server goes down to re-rout traffic. 
 
-You can find a public DNS server to monitor at [this website](https://dnschecker.org/public-dns) or a number of other public DNS server listings. Watch for the recorded uptime percentage, the more the better. You want to find public DNS IPv4 IP addresses to monitor on your IPv4 gateways. Each gateway will need a separate DNS address to monitor.  
+You can find a public DNS server to monitor at [this website](https://dnschecker.org/public-dns) or a number of other public DNS server listings. Watch for the recorded up time percentage, the more the better. You want to find public DNS IPv4 IP addresses to monitor on your IPv4 gateways. Each gateway will need a separate DNS address to monitor.  
 
 ![](assets/WireGuard13.png)
 
@@ -136,7 +136,8 @@ This step explains how to setup NAT mapping, which the firewall uses to get info
 
 ![](assets/WireGuard18.png)
 
-Repeat this process for each of the tunnel interfaces. For example, the `LANwork` network is going to the Atlanta tunnel, the `LANhome` network going to the New York tunnel, and the `LANminers` network is set up for both the Miami and Seattle tunnels. You can set a mapping rule for your mining LAN to all 5 of your tunnels if you want. You can also have multiple LANs mapped to the same tunnel if you want, there is a lot of flexibility.
+Repeat this process for each of the tunnel interfaces. For example, the `LANwork` network is going to the Atlanta tunnel, the `LANhome` network going to the New York tunnel, and the `LANminers` network is set up for both the Miami and Seattle tunnels. You can set a mapping
+ rule for your mining LAN to all 5 of your tunnels if you want. You can also have multiple LANs mapped to the same tunnel if you want, there is a lot of flexibility.
 
 ## Gateway Groups
 This part explains how to add multiple gateways to a group. Remember, you established a gateway for each tunnel, so now you can add those tunnel gateways to a groups, then you can route traffic to a gateway group, which will prioritize the tunnel with the least latency in that group.
