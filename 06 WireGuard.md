@@ -173,4 +173,4 @@ Now that the interface mappings are in place and the gateway groups are establis
 
 That should be all that is needed to get your ASICs to switch from one VPN tunnel to another VPN tunnel automatically based on latency or downed servers. If everything worked, you should be able to plug a laptop into your network card port that you will be using for your miners and then open a web browser and navigate to [ifconfig.co](ifconfig.co), this will tell you your public IP address. Your IP address should appear to be coming from one of the tunnels in your gateway group. If you wait a little while and refresh the page you should see the location automatically switch to another tunnel as the latency variables are always changing. 
 
-![](assets/Miami Seattle.png)
+![](assets/Miami_Seattle.png)
