@@ -2,7 +2,7 @@
 This guide aims to provide basic instructions for setting up a Virtual Private Network (VPN) for a Bitcoin home mining operation. There are several steps involved and setting up a VPN is not intuitive, however, this guide outlines the process step by step. So follow along and by the end you will have all the information you need to make your home network more secure and private. 
 
 <p align="center">
-  <img src="assets/TitleImage.jpg"
+  <img src="assets/TitleImage.jpg">
 </p>       
 
 ## Scope
