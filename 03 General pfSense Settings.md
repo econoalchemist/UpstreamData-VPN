@@ -1,7 +1,7 @@
 # General Configuration and Settings for pfSense
 You should now be able to open a web browser on your regular desktop (not the firewall) and login to your pfSense fire wall with the local IP address, `192.168.1.1` and the credentials, `admin/pfsense`. This section will tell you the basic steps for configuring pfSense. The setup wizard in pfSense makes this very easy and painless.  
 
-For referrence, this video is over 2-hours long, but this is an excellent introduction to pfSense. You do not need to watch this video now but most of the information in this guide came from this video. 
+For reference, this video is over 2-hours long, but this is an excellent introduction to pfSense. You do not need to watch this video now but most of the information in this guide came from this video. 
 
 [![Tom Lawrence Video](assets/TLvid_1.png)](https://youtu.be/fsdm5uc_LsU "Tom Lawrence pfSense Tutorial")
 
@@ -25,7 +25,7 @@ For referrence, this video is over 2-hours long, but this is an excellent introd
 
 ![](assets/pfSenseConfig4.png)
 
-- In step 5 you can change your firewall's IP address. Most home local networks will either use `192.168.0.1` or `192.168.1.1` to access the router or firewall. The reason you may want to change this to a none default local IP address is because if you are on someone else's network and you are trying to VPN back into your home network then you may run into an issue where you have the same address on both ends and the system won't know if you are trying to connect to the local or remote address. For example, you could change your local IP address to `192.168.69.1`.
+- In step 5 you can change your firewall's IP address. Most home local networks will either use `192.168.0.1` or `192.168.1.1` to access the router or firewall. The reason you may want to change this to a none default local IP address is because if you are on someone elses’ network and you are trying to VPN back into your home network then you may run into an issue where you have the same address on both ends and the system won't know if you are trying to connect to the local or remote address. For example, you could change your local IP address to `192.168.69.1`.
 
 ![](assets/pfSenseConfig5.png)
 
