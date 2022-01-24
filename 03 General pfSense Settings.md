@@ -3,7 +3,7 @@ You should now be able to open a web browser on your regular desktop (not the fi
 
 For referrence, this video is over 2-hours long, but this is an excellent introduction to pfSense. You do not need to watch this video now but most of the information in this guide came from this video. 
 
-[![Tom Lawrence Video](assets/TLvid.png)](https://youtu.be/fsdm5uc_LsU "Tom Lawrence pfSense Tutorial")
+[![Tom Lawrence Video](assets/TLvid_1.png)](https://youtu.be/fsdm5uc_LsU "Tom Lawrence pfSense Tutorial")
 
 -Open the `Setup Wizard` from the `System` tab.
 
