@@ -58,7 +58,7 @@ Segregating LANs can be accomplished through the use of Firewall rules and Alias
 
 - Then name this alias something that describes its function, like: `SequesteredNetworks0`. 
 - You can enter a description to remind yourself what its function is. 
-- This aliase will be used in a firewall rule that will be setup on the LAN that you are trying to separate from the other LANs. For example, the `LAN-2` network. So you want to add your other LANs to the `Network` list. This way, `LAN-2` cannot talk to `LAN-1`, `LAN-3`, or `LAN-4`. 
+- This alias will be used in a firewall rule that will be setup on the LAN that you are trying to separate from the other LANs. For example, the `LAN-2` network. So you want to add your other LANs to the `Network` list. This way, `LAN-2` cannot talk to `LAN-1`, `LAN-3`, or `LAN-4`. 
 - Click on `Save` at the bottom of the page and then `Apply Changes` at the top of the page.
 
 ![](assets/pfSenseAdvancedConfig7.png)
@@ -74,7 +74,7 @@ Now you can add additional aliases that will be referenced in firewall rules on 
 
 ![](assets/pfSenseAdvancedConfig8.png)
 
-To review, you create a new aliase for each LAN. The alias will contain a network list of the other LANs. Then you will add a block rule to each LAN that referrences the aliase for that LAN. This way, you should now be able to plug a laptop into each network card port and try to ping the other networks and get a `request timed out` failure. But you will still be able to reach the wide open internet from each LAN. This is how you can protect devices on your LANs from potential attacks introduced by malicious firmware.
+To review, you create a new alias for each LAN. The alias will contain a network list of the other LANs. Then you will add a block rule to each LAN that references the alias for that LAN. This way, you should now be able to plug a laptop into each network card port and try to ping the other networks and get a `request timed out` failure. But you will still be able to reach the wide open internet from each LAN. This is how you can protect devices on your LANs from potential attacks introduced by malicious firmware.
 
 <p align="center">
   <img src="assets/pfSenseAdvancedConfig9.png">
