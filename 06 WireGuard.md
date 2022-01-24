@@ -106,3 +106,71 @@ You can find a public DNS server to monitor at [this website](https://dnschecker
 
 ![](assets/WireGuard15.png)
 
+Now if you go back to your dashboard and look at your gateway monitor, you should see that there are some actual latency metrics to observe. With this information you can setup your gateways to automatically order themselves in priority based on which ones have the lowest latency for your internet traffic. So for example, if you are mining Bitcoin, then you will want to prioritize your ASICs to go through the tunnel with the lowest latency first. Then if that tunnel fails, the firewall can automatically switch them to the next tier gateway with the second to smallest latency and so on. The nest couple steps will show you how to set up this VPN failover capability. 
+
+<p align="center">
+ <img src="assets/WireGuard16.png">
+</p>
+
+## NAT Mapping
+This step explains how to setup NAT mapping, which the firewall uses to get information from one interface to another. Everything is looking good so far, the tunnels are active and there is data going through the gateways. Next, there needs to be some outbound Network Address Translation (NAT) mapping rules established on the firewall.  
+
+- Navigate to the `Firewall` tab then `NAT` then the `Outbound` tab. This will pull up a list of all your network mappings from your WANs to your LANs. Since you have some new interfaces defined, you want to add these mappings to the list. 
+- Click on `Hybrid Outbound NAT Rule Generation` under the `Outbound NAT Mode` section. 
+- Scroll to the bottom of the page and click on `Add`.
+
+![](assets/WireGuard17.png)
+
+- Choose your interface from the drop-down menu for example `MULLVAD_ATLANTA_US167`.
+- Select `IPv4` for the `Address Family`.
+- Select `any` for the `Protocol`.
+- Make sure `Source` is on `Network` and then enter the local IP address range for the LAN you want going down this tunnel. For example, for `LANwork` to go through this tunnel to Atlanta, enter `192.168.69.1/24`. 
+- Then enter a description if you want such as `Outbound NAT for LANwork to Mullvad Atlanta US167`. 
+- Then click on `Save` at the bottom of the page and `Apply Changes` at the top of the page. 
+
+![](assets/WireGuard18.png)
+
+Repeat this process for each of the tunnel interfaces. For example, the `LANwork` network is going to the Atlanta tunnel, the `LANhome` network going to the New York tunnel, and the `LANminers` network is set up for both the Miami and Seattle tunnels. You can set a mapping rule for your mining LAN to all 5 of your tunnels if you want. You can also have multiple LANs mapped to the same tunnel if you want, there is a lot of flexibility.
+
+## Gateway Groups
+This part explains how to add multiple gateways to a group. Remember, you established a gateway for each tunnel, so now you can add those tunnel gateways to a groups, then you can route traffic to a gateway group, which will prioritize the tunnel with the least latency in that group.
+
+- Navigate to `System>Routing` and then the `Gateway Groups` tab.
+
+![](assets/WireGuard27.png)
+
+- Enter a group name like `Mullvad_LB_LANMiners`. The "LB" is for "Load Balance".
+- Set all the gateway priorities to `Tier 1`. If there are any tunnels you wish to exclude from this group, you can set their priority to `Never`.
+- Set the trigger level to `Packet Loss or High Latency`.
+- Add a description if you want such as `Load Balance LANminers Mullvad Tunnels`.
+- Click on `Save` at the bottom of the screen, then `Apply Changes` at the top of the screen. 
+
+![](assets/WireGuard28.png)
+
+If you navigate to `Status` > `Gateways` and then the `Gateway Groups` tab, you should be able to see your new gateway group online. In theory, if you policy route traffic to `Mullvad_LB_LANminers` then it should balance traffic between the two gateways based on latency.
+
+![](assets/WireGuard29.png)
+
+Now this gateway group can be used in a firewall rule to policy route that traffic accordingly. You can repeat this process to add additional gatway groups if you want. Multiple gateway groups can have the same tunnel in them. There is a lot of flexibility. For example, you could have 2 tunnels in a gateway group and route your WiFi access point traffic through and you could have another gateway group with all 5 tunnels to route your miner traffic through. 
+
+## Firewall Rules
+Now that the interface mappings are in place and the gateway groups are established, you can start routing traffic from specific LANs through specific gateway groups. 
+
+- Navigate to `Firewall>Rules` and then the `LANminers` tab or what ever your mining LAN is named. 
+- Click on `Add` at the bottom.
+
+![](assets/WireGuard30.png)
+
+- Set the protocol to `Any`.
+- Click on `Display Advanced`.
+
+![](assets/WireGuard31.png)
+
+- Scroll down to `Gateway` and select the load balance gateway group you created. 
+- Click on `Save` at the bottom of the page and click on `Apply Changes` at the top of the page. 
+
+![](assets/WireGuard32.png)
+
+That should be all that is needed to get your ASICs to switch from one VPN tunnel to another VPN tunnel automatically based on latency or downed servers. If everything worked, you should be able to plug a laptop into your network card port that you will be using for your miners and then open a web browser and navigate to [ifconfig.co](ifconfig.co), this will tell you your public IP address. Your IP address should appear to be coming from one of the tunnels in your gateway group. If you wait a little while and refresh the page you should see the location automatically switch to another tunnel as the latency variables are always changing. 
+
+![](assets/Miami Seattle.png)
