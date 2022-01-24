@@ -13,7 +13,7 @@ For referrence, this video is over 2-hours long, but this is an excellent introd
 
 ![](assets/pfSenseConfig1.png)
 
-- Then on the second step you can configure the hostname, domain, and primary/secondary DNS servers. You can leave `Hostname` and `Domain` as their defaults or set them to whatever you want. Using `100.64.0.3` for the Primary DNS Server for getting out to the internet will enable ad-blocking & tracker-blocking. Uncheck the "Override DNS" box to avoid having DHCP override the DNS servers. `100.64.0.3` is Mullvad's DNS server and discussed in the "XXX" section of this guide. 
+- Then on the second step you can configure the hostname, domain, and primary/secondary DNS servers. You can leave `Hostname` and `Domain` as their defaults or set them to whatever you want. Using `100.64.0.3` for the Primary DNS Server for getting out to the internet will enable ad-blocking & tracker-blocking. Uncheck the "Override DNS" box to avoid having DHCP override the DNS servers. `100.64.0.3` is Mullvad's DNS server and discussed in the [full guide](https://www.econoalchemist.com/post/bitcoin-home-mining-network-privacy). 
 
 ![](assets/pfSenseConfig2.png)
 
