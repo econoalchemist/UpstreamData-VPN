@@ -1,4 +1,4 @@
-# UpstreamData Instructions for Home Mining with a VPN
+# Upstream Data Instructions for Home Mining with a VPN
 This guide aims to provide basic instructions for setting up a Virtual Private Network (VPN) for a Bitcoin home mining operation. There are several steps involved and setting up a VPN is not intuitive, however, this guide outlines the process step by step. So follow along and by the end you will have all the information you need to make your home network more secure and private. 
 
 <p align="center">
@@ -15,7 +15,7 @@ Bitcoin mining is carried out over a Stratum v1 protocol, which is un-encrypted 
 ## Definitions
 You may be exposed to some new terms during the course of this guide, it is important to clarify what these terms mean from the beginning so that you can have a better understanding of what is going on.
 
-- VPN: Virtual Private Network, this establishes an encrypted tunnel for your internet traffic. This means your ISP cannot see the Stratum v1 data in your internet traffic. This also means that your ISP cannot see where your triffic is going and your mining pool cannot see your IP address. Your internet traffic will go straight to a VPN server before reaching the wide open internet.
+- VPN: Virtual Private Network, this establishes an encrypted tunnel for your internet traffic. This means your ISP cannot see the Stratum v1 data in your internet traffic. This also means that your ISP cannot see where your traffic is going and your mining pool cannot see your IP address. Your internet traffic will go straight to a VPN server before reaching the wide open internet.
 - Firewall: The computer that sits between your modem and your home network. 
 - Router: A device connected to your firewall that acts as a WiFi access point for your home network.  
 - [pfSense](https://www.pfsense.org/): Open source firewall software, this will become the hub of your new home network. This firewall will be the link between your modem and your home network. This will also be the link between your home network and your VPN server and thus the wide open internet. 
@@ -24,6 +24,6 @@ You may be exposed to some new terms during the course of this guide, it is impo
   
 These are the tools that will be explained in this guide. You will see how these puzzle pieces all fit together to help you guard your privacy and secure your Bitcoin home mining operation. These tools are not the only ones available, there are a range of firewall software projects, VPN protocols, and VPN providers. Feel free to explore what is out there and find what works best for you. There are also different ways in which to achieve the ends of guarding your privacy, for example setting up a router with DNScrypt and setting up a SOCKs5 proxy. 
   
-The following is a straight forward and common sense approach to configuring a private and secure Bitcoin home mining network. Even with the other tools and approaches available, the tradeoff was added complication. The risk of introducing latency from the VPN connection is mitigated by automatically routing internet traffic over multiple VPN tunnels.   
+The following is a straight forward and common sense approach to configuring a private and secure Bitcoin home mining network. Even with the other tools and approaches available, the trade off was added complication. The risk of introducing latency from the VPN connection is mitigated by automatically routing internet traffic over multiple VPN tunnels.   
   
-If at anypoint in this guide you need more clarity, you can view the full and complete guide with many more details [here](https://www.econoalchemist.com/post/bitcoin-home-mining-network-privacy).  
+If at any point in this guide you need more clarity, you can view the full and complete guide with many more details [here](https://www.econoalchemist.com/post/bitcoin-home-mining-network-privacy).  
