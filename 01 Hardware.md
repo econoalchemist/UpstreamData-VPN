@@ -4,7 +4,7 @@ First things first, you are going to need a computer to run as your firewall. No
 - Buy a [NetGate](https://shop.netgate.com/products/2100-base-pfsense) firewall with pfSense preinstalled.
 - Use an old desktop and flash pfSense on it yourself. 
 
-These next few steps will show you how to turn an old desktop into a pfSense firewall. If you bought a NetGate, then skip ahead to "XXX".
+These next few steps will show you how to turn an old desktop into a pfSense firewall. If you bought a NetGate, then skip ahead to the "Connecting to the home network" section.
 
 ## Network card
 Most desktops only have 1 Ethernet port, but if this is going to be your new firewall you need at least two Ethernet ports. More than two ports will give you even more customization and flexibility. The Intel i350 network card has four Ethernet ports, this means you can have 1 port for the Wide Area Network connection (WAN) and 3 more ports for different Local Area Network connections (LAN), for example, one LAN for your ASICs, one for your WiFi, and one for your security cameras. You can find an Intel i350 network card on Amazon for ~$160 USD.
