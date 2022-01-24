@@ -119,7 +119,9 @@ This step explains how to setup NAT mapping, which the firewall uses to get info
 - Click on `Hybrid Outbound NAT Rule Generation` under the `Outbound NAT Mode` section. 
 - Scroll to the bottom of the page and click on `Add`.
 
-![](assets/WireGuard17.png)
+<p align="center">
+ <img src="assets/WireGuard17.png">
+</p> 
 
 - Choose your interface from the drop-down menu for example `MULLVAD_ATLANTA_US167`.
 - Select `IPv4` for the `Address Family`.
@@ -164,7 +166,9 @@ Now that the interface mappings are in place and the gateway groups are establis
 - Set the protocol to `Any`.
 - Click on `Display Advanced`.
 
-![](assets/WireGuard31.png)
+<p align="center">
+ <img src="assets/WireGuard31.png">
+</p>
 
 - Scroll down to `Gateway` and select the load balance gateway group you created. 
 - Click on `Save` at the bottom of the page and click on `Apply Changes` at the top of the page. 
