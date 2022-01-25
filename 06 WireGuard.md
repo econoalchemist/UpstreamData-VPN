@@ -70,7 +70,7 @@ Next, the interfaces need to be assigned for each tunnel. This is similar to how
 - Click on the `Enable Interface` box. 
 - Enter your description, for example: `Mullvad_Atlanta_US167`. 
 - Select `Static PIv4`. 
-- Type `1420` in the `MTU & MSS` boxes. 
+- Type `1420` in the `MTU` & `MSS` boxes. 
 - Now copy/paste the host IP address from your Mullvad configuration file in the `IPv4 Address` dialog box. 
 - Then click on on `Add A New Gateway`.
 
