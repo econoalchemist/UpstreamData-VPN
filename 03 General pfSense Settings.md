@@ -21,7 +21,7 @@ For reference, this video is over 2-hours long, but this is an excellent introdu
 
 ![](assets/pfSenseConfig3.png)
 
-- On the fourth step, you can select "DHCP" for the WAN interface and leave all the other fields as their defaults. If you want to spoof your MAC address you can do so in this step. For the last two fields, ensure the "Block RFC1918 Private Networks" box and the "Block bogon networks" box are checked, this will automatically add the appropriate rules to your firewall. 
+- On the fourth step, you can select `DHCP` for the WAN interface and leave all the other fields as their defaults. If you want to spoof your MAC address you can do so in this step. For the last two fields, ensure the `Block RFC1918 Private Networks` box and the `Block bogon networks` box are checked, this will automatically add the appropriate rules to your firewall. 
 
 ![](assets/pfSenseConfig4.png)
 
@@ -33,7 +33,7 @@ For reference, this video is over 2-hours long, but this is an excellent introdu
 
 ![](assets/pfSenseConfig6.png)
 
-- Then in step 7 you can click the `Reload` button. As this is reloading, unplug the power cable from your switch. Since the router local IP address was changed to `192.168.69.1` (or whatever you chose), all the devices on the network will now have their IP addresses updated to that IP range. So if you have Putty or other SSH sessions configured to your RaspberryPi node for example, you will now need to update those connection configurations. Unplugging the power from the switch if you are using one and plugging it back in after the router is rebooted helps get all your devices reassigned.
+- Then in step 7 you can click the `Reload` button. As this is reloading, unplug the power cable from your switch. Since the firewall local IP address was changed to `192.168.69.1` (or whatever you chose), all the devices on the network will now have their IP addresses updated to that IP range. So if you have Putty or other SSH sessions configured to your RaspberryPi node for example, you will now need to update those connection configurations. Unplugging the power from the switch, if you are using one, and plugging it back in after the firewall is rebooted helps get all your devices reassigned.
 
 ![](assets/pfSenseConfig7.png)
 
