@@ -142,7 +142,7 @@ Repeat this process for each of the tunnel interfaces. For example, the `LANwork
 ## Gateway Groups
 This part explains how to add multiple gateways to a group. Remember, you established a gateway for each tunnel, so now you can add those tunnel gateways to a groups, then you can route traffic to a gateway group, which will prioritize the tunnel with the least latency in that group.
 
-- Navigate to `System>Routing` and then the `Gateway Groups` tab.
+- Navigate to `System` > `Routing` and then the `Gateway Groups` tab and click on `Add`.
 
 ![](assets/WireGuard27.png)
 
@@ -163,7 +163,7 @@ Now this gateway group can be used in a firewall rule to policy route that traff
 ## Firewall Rules
 Now that the interface mappings are in place and the gateway groups are established, you can start routing traffic from specific LANs through specific gateway groups. 
 
-- Navigate to `Firewall>Rules` and then the `LANminers` tab or what ever your mining LAN is named. 
+- Navigate to `Firewall` > `Rules` and then the `LANminers` tab or what ever your mining LAN is named. 
 - Click on `Add` at the bottom.
 
 ![](assets/WireGuard30.png)
