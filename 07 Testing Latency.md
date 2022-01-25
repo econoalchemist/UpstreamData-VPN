@@ -7,7 +7,7 @@ The first 2-1/2 days (60 hours) were spent mining with the VPN on. The second 2-
 
 In the first 60-hours the ASIC had 43,263 accepted packets and 87 rejected packets. This equates to 0.201% or in other words, 0.201% of the expended resources are not being rewarded. 
 
-After 120-hours the ASIC had 87,330 accepted packets and 187 rejected packets. By subtracting the initial 60-hour readings, while the VPN was turned off, 44,067 accepted packets and 100 rejected packets were left. This equates to 0.226%. Surprisingly, slightly more of a rejection ratio without the privacy benefits of a VPN given the same amount of time. 
+After 120-hours the ASIC had 87,330 accepted packets and 187 rejected packets. By subtracting the initial 60-hour readings (87,330 - 43,263) & (187 - 87), 44,067 accepted packets and 100 rejected packets were left. This equates to 0.226%. Surprisingly, slightly more of a rejection ratio without the privacy benefits of a VPN given the same amount of time. 
 
 ![](assets/latency1.png)
 
