@@ -1,13 +1,13 @@
 # Installing pfSense
-This section will show you how to install pfSense onto your desktop. These steps are not carried out on the desktop you are turning into your firewall, these steps are carried out on another desktop or laptop. 
+This section will show you how to install pfSense onto your desktop. These steps are not carried out on the desktop you are turning into your firewall, these steps are carried out on a separate desktop or laptop. 
 
 ## Download pfSense
-First, navigate to [this pfSense download page](https://www.pfsense.org/download/) and once there, 
+First, navigate to [this pfSense download page](https://www.pfsense.org/download/) and once there: 
 
-- Select the "AMD64" Architecture
-- Then "USB Memstick installer"
-- Then "VGA" Console
-- Then select which ever mirror is closest to your geographic location such as demonstrated in the screenshot below and click on "Download".
+- Select the `AMD64` Architecture
+- Then `USB Memstick installer`
+- Then `VGA` Console
+- Then select which ever mirror is closest to your geographic location such as demonstrated in the screenshot below and click on `Download`.
 
 <p align="center">
   <img width="500" src="assets/PfsenseDownload.png">
@@ -44,10 +44,10 @@ After the flashing is complete, you should get a green check mark indicating tha
 </p>  
 
 ## Install pfSense
-Connect a keyboard, monitor, power cable, and the flashed USB drive to your desktop computer that you installed the network card in. The monitor needs to be connected via VGA connections, DisplayPort connections won't work with the image you downloaded from the steps above. Do not connect the Ethernet cables yet. If you have any data on your desktop that you want to save, this is your last chance to save it before you erase the hard drive. 
+Connect a keyboard, monitor, power cable, and the flashed USB drive to your desktop computer that you installed the network card in. The monitor needs to be connected via VGA connections, DisplayPort connections won't work with the image you downloaded from the steps above. Do not connect the Ethernet cables yet. *If you have any data on your desktop that you want to save, this is your last chance to save it before you erase the hard drive.* 
 
 
-Once everything is connected, power on your desktop. Some computers will automatically detect that there is a bootable USB drive inserted and they will ask you which drive you want to boot from. If not, the computer may just defaulted to booting from the "C:\" drive and launch Windows automatically. If this happens to you, shutdown the computer and then hold down "F12" on the keyboard and turn it back on. This will launch the BIOS where you can tell the computer which drive you want to boot from. 
+Once everything is connected, power on your desktop. Some computers will automatically detect that there is a bootable USB drive inserted and they will ask you which drive you want to boot from. If not, the computer may just default to booting from the `C:\` drive and launch Windows automatically. If this happens to you, shutdown the computer and then hold down "F12" on the keyboard and turn it back on. This will launch the BIOS where you can tell the computer which drive you want to boot from. 
 
 
 For example, in this BIOS environment, the SanDisk USB drive can be selected. After selecting this option, a script will run briefly and then the pfSense installer will launch. 
@@ -55,8 +55,8 @@ For example, in this BIOS environment, the SanDisk USB drive can be selected. Af
 ![](assets/pfsFlash0.jpg)
 
 <p align="center">
-  <img width="450" src="assets/Flash3.png">
-  <img width="450" src="assets/Flash4.png">
+  <img width="450" src="assets/pfsFlash1.jpg">
+  <img width="450" src="assets/pfsFlash2.jpg">
 </p>
 
 The installation steps are very easy to follow, just keep following the prompts until the end. These are the recommended settings to choose along the way:
