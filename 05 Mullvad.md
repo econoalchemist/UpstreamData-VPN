@@ -8,19 +8,19 @@ Now that you have pfSense setup, you're ready to get your Mullvad account. Mullv
 
 The basic idea presented in this section is that you will see how to make a Mullvad account and then build the configuration files that you're going to need so that WireGuard has all the information it needs to build the encrypted tunnels in the next section. Please note, that with the kind of configuration presented in this guide is not the same as downloading the Mullvad application from their website, you do not need to download the Mullvad app.  
 
-Navigate to [https://mullvad.net/en/](https://mullvad.net/en/) and click on "Generate Account".
+- Navigate to [https://mullvad.net/en/](https://mullvad.net/en/) and click on "Generate Account".
 
 ![](assets/Mullvad0.png)
 
-Mullvad does not collect any information from you such as name, phone number, email, etc. Mullvad generates a unique account number and this is the only identifying piece of information you get related to your account so write it down and secure it.   
+- Mullvad does not collect any information from you such as name, phone number, email, etc. Mullvad generates a unique account number and this is the only identifying piece of information you get related to your account so write it down and secure it.   
 
 ![](assets/Mullvad1.png)
 
-Next select your payment method. You get a 10% discount for using bitcoin. The subscription works for as long as you want to pay for (up to 12 months) at the rate of €5 per month. So a 1 year subscription for example would be €60 or ~0.002 BTC at today's rate (January 2022). You will be presented with a Bitcoin address QR code to send your payment to.
+- Next, select your payment method. You get a 10% discount for using bitcoin. The subscription works for as long as you want to pay for (up to 12 months) at the rate of €5 per month. So a 1 year subscription for example would be €60 or ~0.002 BTC at today's rate (January 2022). You will be presented with a Bitcoin address QR code to send your payment to.
 
 ![](assets/Mullvad2.png)
 
-After confirmation on-chain, the Mullvad account is topped off and should show that you have time remaining, make considerations about selecting a server location from Mullvad's long list of servers. If you're planning on running ASICs behind your VPN, then connecting to a server relatively close to your actual geographic location is recommended to try and help reduce any latency as much as possible. Ideally, you will sect servers that are between your actual geographic location and the location of your mining pool's server. 
+After confirmation on-chain, the Mullvad account is topped off and should show that you have time remaining, make considerations about selecting a server location from Mullvad's long list of servers. If you're planning on running ASICs behind your VPN, then connecting to a server relatively close to your actual geographic location is recommended to try and help reduce any latency as much as possible. Ideally, you will select servers that are between your actual geographic location and the location of your mining pool's server. 
 
 The way Mullvad works is with configuration files that assign a unique public/private key pair for each tunnel address. The basic idea here is that there will be a primary tunnel connected to one server and a secondary tunnel connected with another server in a different geographic location just in case the primary tunnel connection goes off line. This way, the mining traffic will automatically switch over to the other tunnel and there will be no interruption in concealing your public IP address or encrypting your traffic data. Each Mullvad subscription allows for up to 5 key pairs, this means you can configure up to 5 VPN tunnels for €5 per month.  
 
