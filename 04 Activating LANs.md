@@ -39,7 +39,7 @@ Before you can test your new network, you need to have an IP address setup on it
 
 - Navigate to `Services` then `DHCP Server`. 
 - Then click on the tab for your new, `LANhome` (or whatever your secondary LAN is called). 
-- Click on the `Enable` box and then add your IP address range in the two `Range` boxes. For example, `192.168.70.1 to 192.168.70.254`. Then click on `Save` at the bottom of the page and `Apply Changes` at the top of the page.
+- Click on the `Enable` box and then add your IP address range in the two `Range` boxes. For example, `192.168.70.1` to `192.168.70.254`. Then click on `Save` at the bottom of the page and `Apply Changes` at the top of the page.
 
 ![](assets/pfSenseAdvancedConfig4.png)
 
@@ -63,11 +63,12 @@ Segregating LANs can be accomplished through the use of Firewall rules and Alias
 
 ![](assets/pfSenseAdvancedConfig7.png)
 
-Now you can add additional aliases that will be referenced in firewall rules on the other LANs to prevent `LAN-3` from talking to `LAN-1`, `LAN-2`, and `LAN-4`. So on and so forth until all my networks are sequestered in a way that only the firewall can see what is connected on the other networks.
+Now you can add additional aliases that will be referenced in firewall rules on the other LANs to prevent `LAN-3` from talking to `LAN-1`, `LAN-2`, and `LAN-4`. So on and so forth until all the networks are sequestered in a way that only the firewall can see what is connected on the other networks.
 
 - With the alias created, a new firewall rule can be applied referencing this alias on the secondary LAN. 
 - Navigate to `Firewall` > `Rules`, select the LAN you want to apply the rule to, e.g, `LAN-2`. 
-- Then for `Action` set it to `Block`. For `Protocol` set it to `Any`. 
+- Then for `Action` set it to `Block`. 
+- For `Protocol` set it to `Any`. 
 - For `Destination` set it to `Single host or alias`. 
 - Then enter your alias name. 
 - Click on `Save` at the bottom of the page and then `Apply Changes` at the top of the page.
