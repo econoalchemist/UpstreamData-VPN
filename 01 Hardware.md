@@ -1,13 +1,13 @@
 # Installing pfSense and configuring the firewall settings. 
-First things first, you are going to need a computer to run as your firewall. Now, you have a couple options when it comes to hardware:
+You are going to need a computer to run as your firewall. There are a couple options when it comes to hardware:
 
-- Buy a [NetGate](https://shop.netgate.com/products/2100-base-pfsense) firewall with pfSense preinstalled.
-- Use an old desktop and flash pfSense on it yourself. 
+1) Buy a [NetGate](https://shop.netgate.com/products/2100-base-pfsense) firewall with pfSense preinstalled.
+2) Use an old desktop and flash pfSense on it yourself. 
 
-These next few steps will show you how to turn an old desktop into a pfSense firewall. If you bought a NetGate, then skip ahead to the "Connecting to the home network" section.
+These next few steps will show you how to turn an old desktop into a pfSense firewall. If you bought a NetGate, then skip ahead to the [Connecting to the home network](https://econoalchemist.github.io/UpstreamData-VPN/02%20Install%20pfSense.html#connecting-to-the-home-network) section.
 
 ## Network card
-Most desktops only have 1 Ethernet port, but if this is going to be your new firewall you need at least two Ethernet ports. More than two ports will give you even more customization and flexibility. The Intel i350 network card has four Ethernet ports, this means you can have 1 port for the Wide Area Network connection (WAN) and 3 more ports for different Local Area Network connections (LAN), for example, one LAN for your ASICs, one for your WiFi, and one for your security cameras. You can find an Intel i350 network card on Amazon for ~$160 USD.
+Most desktops only have 1 Ethernet port, but if this is going to be your new firewall, you need at least two Ethernet ports. More than two ports will give you even more customization and flexibility. The Intel i350 network card has four Ethernet ports, this means you can have 1 port for the Wide Area Network connection (WAN) and 3 more ports for different Local Area Network connections (LAN), for example, one LAN for your ASICs, one for your WiFi, and one for your security cameras. You can find an Intel i350 network card on Amazon for ~$160 USD.
 
 <p align="center">
   <img src="assets/Card1.jpg">
