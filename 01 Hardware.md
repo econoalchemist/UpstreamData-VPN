@@ -2,6 +2,7 @@
 You are going to need a computer to run as your firewall. There are a couple options when it comes to hardware:
 
 1) Buy a [NetGate](https://shop.netgate.com/products/2100-base-pfsense) firewall with pfSense preinstalled.
+
 2) Use an old desktop and flash pfSense on it yourself. 
 
 These next few steps will show you how to turn an old desktop into a pfSense firewall. If you bought a NetGate, then skip ahead to the [Connecting to the home network](https://econoalchemist.github.io/UpstreamData-VPN/02%20Install%20pfSense.html#connecting-to-the-home-network) section.
